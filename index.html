@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Map Ayuttaya </title>
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
+<body>
+<div id="map" style="height: 600px"></div>
+
+<script>
+var map = L.map('map').setView([14.35886559,100.5674163], 10);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+var greenIcon = L.icon({
+iconUrl: 'Home.png',
+iconSize:     [30, 30], // size of the icon
+iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+});
+
+L.marker([14.35500488, 100.5577642],{icon:greenIcon}).addTo(map).bindPopup("<b>วิหารพระมงคลบพิตร</b><br>อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา<br>");
+
+L.marker([14.35601843, 100.5580512],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดพระศรีสรรเพชญ์</b><br>อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา<br>");
+
+L.marker([14.35410011, 100.5606135],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดพระราม</b><br>อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา<br>");
+
+L.marker([14.35886559, 100.5674163],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดราชบูรณะ</b><br>อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา<br>");
+
+L.marker([14.35723529, 100.5673746],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดมหาธาตุ</b><br>อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา<br>");
+
+L.marker([14.35955116, 100.5614263],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดธรรมิการาม</b><br>อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา<br>");
+</script>
+</body>
+</html>
